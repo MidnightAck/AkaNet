@@ -103,6 +103,7 @@
 				6B73DBF12C32AEBE00B00926 /* Sources */,
 				6B73DBF22C32AEBE00B00926 /* Frameworks */,
 				6B73DBF32C32AEBE00B00926 /* Resources */,
+				39A60FEC9C4535C54623CBA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +161,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		39A60FEC9C4535C54623CBA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AkaNetExample/Pods-AkaNetExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AkaNetExample/Pods-AkaNetExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AkaNetExample/Pods-AkaNetExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A3789734A81D92388D877158 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

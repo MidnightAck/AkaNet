@@ -1,0 +1,27 @@
+{
+  "name": "AkaNet",
+  "version": "0.0.1",
+  "summary": "AkaNet",
+  "description": "STDebug",
+  "homepage": "https",
+  "authors": {
+    "sekitou": "wendaoliu40@gmail.com"
+  },
+  "source": {
+    "git": "ssh://no_such_git_yet/haha.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "14.0"
+  },
+  "source_files": "**/*.{h,m,swift}",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "dependencies": {
+    "HandyJSON": [
+
+    ]
+  }
+}

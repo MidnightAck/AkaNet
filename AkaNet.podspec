@@ -38,8 +38,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+   spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,7 +51,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.authors            = { "aka" => "wendaoliu40@gmail.com" }
+  spec.authors            = { "sekitou" => "wendaoliu40@gmail.com" }
   spec.social_media_url   = "https://twitter.com/liusiyuan"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,8 +87,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Source", "Source/**/*.{h,m}"
-  spec.exclude_files = "Source/Exclude"
+  spec.source_files  = "Source/**/*.swift"
 
   # spec.public_header_files = "Classes/**/*.h"
 

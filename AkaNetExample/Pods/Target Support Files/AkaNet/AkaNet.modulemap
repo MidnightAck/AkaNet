@@ -1,0 +1,6 @@
+framework module AkaNet {
+  umbrella header "AkaNet-umbrella.h"
+
+  export *
+  module * { export * }
+}

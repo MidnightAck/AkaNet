@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: 1a1904bfe68f90f3babb75de35043c4a792dd0ea
+PODS:
+  - AkaNet (0.0.1):
+    - HandyJSON
+  - HandyJSON (5.0.2)
 
-COCOAPODS: 1.11.3
+DEPENDENCIES:
+  - AkaNet (from `./Source`)
+  - HandyJSON (~> 5.0.2)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - HandyJSON
+
+EXTERNAL SOURCES:
+  AkaNet:
+    :path: "./Source"
+
+SPEC CHECKSUMS:
+  AkaNet: 70d1e23c6f0b3caf2242893ba50d9b0822a8bd56
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+
+PODFILE CHECKSUM: 43514a038ee7d4502dbf369fc463b2ff6759322a
+
+COCOAPODS: 1.12.1

@@ -9,7 +9,6 @@ PODS:
 
 DEPENDENCIES:
   - AkaNet (from `./Source`)
-  - HandyJSON (~> 5.0.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -27,6 +26,6 @@ SPEC CHECKSUMS:
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Reachability: fd0ecd23705e2599e4cceeb943222ae02296cbc6
 
-PODFILE CHECKSUM: 34db20410ae02d62bb0a2d113050fd43d8db309b
+PODFILE CHECKSUM: af392bfe68ee157726e356797f25095575a51786
 
 COCOAPODS: 1.15.2

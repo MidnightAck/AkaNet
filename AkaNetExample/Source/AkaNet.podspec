@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.version          = '0.0.1'
   s.summary          = 'AkaNet'
   s.description      = <<-DESC
-  STDebug
+  AkaNet
                        DESC
   s.homepage         = 'https'
   s.author           = { 'sekitou' => 'wendaoliu40@gmail.com' }

@@ -34,8 +34,8 @@ public class NetworkTypeManager: NSObject {
         do{
             let reachability: Reachability = try Reachability()
             try reachability.startNotifier()
-            let status = reachability.connection
-            if(status == .cellular){
+            let status = reachability.currentReachabilityStatus()
+            if status == .ReachableViaWWAN {
                 let networkInfo = CTTelephonyNetworkInfo()
                 
                 if let currentRadioAccessTechnology = networkInfo.currentRadioAccessTechnology {
@@ -58,9 +58,9 @@ public class NetworkTypeManager: NSObject {
                 } else {
                     return "unavailable"
                 }
-            }else if (status == .wifi){
+            }else if status == .ReachableViaWiFi {
                 return "WIFI"
-            }else if (status == .unavailable){
+            }else if status == .NotReachable {
                 return "unavailable"
             }else{
                 return "unavailable"

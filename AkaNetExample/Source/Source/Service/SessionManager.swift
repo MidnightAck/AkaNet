@@ -394,14 +394,9 @@ public class SessionManager : NSObject{
             // 埋点
             let reachability = try! Reachability()
             trackRequestResult(data: data, response: response as? HTTPURLResponse, error: error)
-            // 401 检查token是否过期
-            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 401,let data {
-                checkUserStatusFromResponse(request, completion: completion, response: httpResponse, data: data)
-                return
-            }
             // 错误处理,这种一般是端上请求没有发出去等,没有把请求发出去,先重试,重试还没好直接跑出错误
             if let error = error as NSError?, error.domain == NSURLErrorDomain {
-                if reachability.connection == .unavailable {
+                if reachability.currentReachabilityStatus() == .NotReachable {
                     completion(data, response, error)
                     return
                 }
@@ -418,15 +413,6 @@ public class SessionManager : NSObject{
             }
         }.resume()
     }
-    
-    
-    private static func refreshOrGetNewTokenIfNeeded() {
-        guard !isRefreshingToken else {return}
-        isRefreshingToken = true
-        getNewToken()
-    }
-    
-
     
     private static func handlePendingRequests() {
         let requests = pendingRequests

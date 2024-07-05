@@ -1,7 +1,11 @@
 PODS:
   - AkaNet (0.0.1):
+    - Alamofire
     - HandyJSON
+    - Reachability
+  - Alamofire (5.9.1)
   - HandyJSON (5.0.2)
+  - Reachability (3.7.6)
 
 DEPENDENCIES:
   - AkaNet (from `./Source`)
@@ -9,16 +13,20 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - HandyJSON
+    - Reachability
 
 EXTERNAL SOURCES:
   AkaNet:
     :path: "./Source"
 
 SPEC CHECKSUMS:
-  AkaNet: 70d1e23c6f0b3caf2242893ba50d9b0822a8bd56
+  AkaNet: 89669eb9d4d731ae563ae7541cba35547c1e9c4c
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Reachability: fd0ecd23705e2599e4cceeb943222ae02296cbc6
 
-PODFILE CHECKSUM: 43514a038ee7d4502dbf369fc463b2ff6759322a
+PODFILE CHECKSUM: 34db20410ae02d62bb0a2d113050fd43d8db309b
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2

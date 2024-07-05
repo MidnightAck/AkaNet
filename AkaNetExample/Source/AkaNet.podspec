@@ -18,12 +18,14 @@ Pod::Spec.new do |s|
   s.source           = {
     :git => 'ssh://no_such_git_yet/haha.git', :tag => s.version.to_s
   }
-  s.ios.deployment_target = '14.0'
+  s.ios.deployment_target = '15.0'
   
   s.source_files = '**/*.{h,m,swift}'
   
   s.frameworks = 'Foundation', 'UIKit'
   
   s.dependency 'HandyJSON'
-  
+  s.dependency 'Alamofire'
+  s.dependency 'Reachability'
+
 end

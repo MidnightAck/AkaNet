@@ -4,7 +4,6 @@ import HandyJSON
 import UIKit
 
 public protocol AkaNetAdaptable {
-    var auth_token: String { get }
     var app_id: Int { get }
     var user_id: Int { get }
     var idfa: String { get }
@@ -205,6 +204,7 @@ extension AkaNetAdaptable {
 
 public struct AkaNetAdapter {
     struct netAdapter : AkaNetAdaptable {
+        
     }
     public static let shared: AkaNetAdaptable = (AkaNetAdapter() as? AkaNetAdaptable) ?? netAdapter()
 }

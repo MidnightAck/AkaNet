@@ -24,16 +24,12 @@ extension AkaBasicMoyaAPI: TargetType {
             var domain = AkaNetAdapter.shared.domain()
             if domainType == .streaming {
                 domain = AkaNetAdapter.shared.streamingDomain()
-            } else if domainType == .mirror {
-                domain = AkaNetAdapter.shared.mirrorDomain()
             }
             return URL(string: domain)!
         case .post(_, _, let domainType):
             var domain = AkaNetAdapter.shared.domain()
             if domainType == .streaming {
                 domain = AkaNetAdapter.shared.streamingDomain()
-            } else if domainType == .mirror {
-                domain = AkaNetAdapter.shared.mirrorDomain()
             }
             return URL(string: domain)!
         }

@@ -12,7 +12,7 @@
     "tag": "0.0.1"
   },
   "platforms": {
-    "ios": "14.0"
+    "ios": "15.0"
   },
   "source_files": "**/*.{h,m,swift}",
   "frameworks": [
@@ -21,6 +21,12 @@
   ],
   "dependencies": {
     "HandyJSON": [
+
+    ],
+    "Alamofire": [
+
+    ],
+    "Reachability": [
 
     ]
   }

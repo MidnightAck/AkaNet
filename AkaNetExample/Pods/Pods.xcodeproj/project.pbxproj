@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		00E150B30B82E69C3CC51DB08C9EC74F /* AnyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0776069ACEF303959088B04B08DA4 /* AnyExtensions.swift */; };
 		012DD9B737A4E18763E0289B875FE83C /* MangledName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65C75685E4F0DC2A0B64BA36C37B7 /* MangledName.swift */; };
+		049A7CC92C37C39E00B4AC56 /* AkaNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A7CC82C37C39E00B4AC56 /* AkaNetworkService.swift */; };
+		049A7CCB2C37C59400B4AC56 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A7CCA2C37C59400B4AC56 /* NetworkService.swift */; };
 		0634C3CBBA3930B821141AFFB75B2BFF /* NetworkTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC7BD53403318AAA2880F001C3CF4B1 /* NetworkTypeManager.swift */; };
 		0AB7622B8FC805020752DF09E8D71D9A /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438F79FBB5253E3D662F86A27B9EB05 /* URLSessionConfiguration+Alamofire.swift */; };
 		0B75BF24C64993BF9407622CABB51E2D /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45894B5D4B8DD727E0620537201E4C34 /* Metadata.swift */; };
@@ -219,6 +221,8 @@
 /* Begin PBXFileReference section */
 		001E30A6EAF6268B3A8C16415AF0F3F7 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0146AD6481E1D2E69C54BE332E6130D2 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Source/DateFormatterTransform.swift; sourceTree = "<group>"; };
+		049A7CC82C37C39E00B4AC56 /* AkaNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaNetworkService.swift; sourceTree = "<group>"; };
+		049A7CCA2C37C59400B4AC56 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		066C8998F4E203BBA60795815662D2A3 /* Pods-AkaNetExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AkaNetExample.debug.xcconfig"; sourceTree = "<group>"; };
 		078C9D30E4813A1A89675CECB2C74AA7 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/Features/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		080952758E67F74C2039538603D07EC9 /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Source/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
@@ -561,6 +565,7 @@
 			children = (
 				5FC7BD53403318AAA2880F001C3CF4B1 /* NetworkTypeManager.swift */,
 				5BB2D2756349EBC5D2BDCC4B2B805B39 /* SessionManager.swift */,
+				049A7CCA2C37C59400B4AC56 /* NetworkService.swift */,
 			);
 			name = Service;
 			path = Source/Service;
@@ -702,6 +707,7 @@
 				E1FEC6451E58981620A15C9CCB1054B9 /* Pod */,
 				30340AEC11066447D4419F5663556BC5 /* Service */,
 				DF4D95B051720C39B816008D1712D8A7 /* Support Files */,
+				049A7CC82C37C39E00B4AC56 /* AkaNetworkService.swift */,
 			);
 			name = AkaNet;
 			path = ../Source;
@@ -1226,6 +1232,7 @@
 				C8260C79B6550AB5A700525D0543CABB /* MoyaPublisher.swift in Sources */,
 				289E79B6ABD5BCB548D82E458725FC87 /* MoyaService.swift in Sources */,
 				2C7D75A9D587344DD6D0E622DB720C9C /* MultipartFormData.swift in Sources */,
+				049A7CC92C37C39E00B4AC56 /* AkaNetworkService.swift in Sources */,
 				CA99563C0CA1528998EF020582C1FAAF /* MultiTarget.swift in Sources */,
 				FAAA9703CB5BF59CD7B4E7918C864469 /* NetworkConfig.swift in Sources */,
 				0634C3CBBA3930B821141AFFB75B2BFF /* NetworkTypeManager.swift in Sources */,
@@ -1234,6 +1241,7 @@
 				6A3007FA54CA58E2BB1C71C2416506AB /* RequestTypeWrapper.swift in Sources */,
 				95E80672110A10AE50B47DBC5C8202BA /* Response.swift in Sources */,
 				56300A974A3BEB22C7406CD2F1DFD220 /* ServerEvents.swift in Sources */,
+				049A7CCB2C37C59400B4AC56 /* NetworkService.swift in Sources */,
 				54123D6D3E2BFD55A77345A0CC89F615 /* SessionManager.swift in Sources */,
 				C8E8F2251A527348A12FBB82DD3A1EB4 /* StreamManager.swift in Sources */,
 				F443519B03E25EE0D1E96BC41AFEA42B /* TargetType.swift in Sources */,

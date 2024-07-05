@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AkaNet"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "A networking library built on top of Moya with advanced features."
   spec.platform     = :ios, "15.0"
   spec.description  = <<-DESC

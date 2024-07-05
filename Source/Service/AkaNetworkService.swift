@@ -31,7 +31,6 @@
 
 
 import Foundation
-import HandyJSON
 import Combine
 
 public class AkaNetworkService : NSObject{
@@ -47,9 +46,6 @@ public class AkaNetworkService : NSObject{
         StreamManager.StreamRequest(address: address, params: params, block: block)
     }
     
-    public static func getBaseResp(res:Dictionary<String,Any>) -> BaseResp{
-        return BaseResp.deserialize(from: (res["base_resp"] as? Dictionary)) ?? BaseResp()
-    }
 }
 
 

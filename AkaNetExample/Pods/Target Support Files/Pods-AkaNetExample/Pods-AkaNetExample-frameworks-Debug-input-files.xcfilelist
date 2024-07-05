@@ -1,5 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-AkaNetExample/Pods-AkaNetExample-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AkaNet/AkaNet.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
 ${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework

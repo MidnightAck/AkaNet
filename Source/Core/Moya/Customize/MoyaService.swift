@@ -30,7 +30,6 @@
 //
 
 import Foundation
-import HandyJSON
 import Combine
 
 public class MoyaService: NSObject {

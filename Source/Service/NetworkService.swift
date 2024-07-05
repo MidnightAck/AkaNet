@@ -30,7 +30,6 @@
 //
 
 import Foundation
-import HandyJSON
 import Combine
 
 class NetworkService: NSObject {

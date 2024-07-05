@@ -2,7 +2,7 @@
   "name": "AkaNet",
   "version": "0.0.1",
   "summary": "AkaNet",
-  "description": "STDebug",
+  "description": "AkaNet",
   "homepage": "https",
   "authors": {
     "sekitou": "wendaoliu40@gmail.com"
@@ -20,9 +20,6 @@
     "UIKit"
   ],
   "dependencies": {
-    "HandyJSON": [
-
-    ],
     "Alamofire": [
 
     ],

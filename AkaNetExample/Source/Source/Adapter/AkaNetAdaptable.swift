@@ -30,7 +30,6 @@
 //
 
 import Foundation
-import HandyJSON
 import UIKit
 
 public protocol AkaNetAdaptable {
@@ -51,7 +50,6 @@ public protocol AkaNetAdaptable {
     var defaultStreamingDomain: String { get }
     var defaultTestDomain: String { get }
     var dynamicIps: [String] { get }
-    var domainList: [Domain] { get }
     
     var requestPoolLimit: Int { get }
     
@@ -147,10 +145,6 @@ extension AkaNetAdaptable {
     public var disable_personalization: Bool {
         return false
     }
-
-    public var domainList:[Domain] {
-        return []
-    }
     
     public func commonParams() -> [String: Any] {
         return [:]
@@ -225,16 +219,4 @@ public struct AkaNetAdapter {
         
     }
     public static let shared: AkaNetAdaptable = (AkaNetAdapter() as? AkaNetAdaptable) ?? netAdapter()
-}
-
-
-public struct Domain: HandyJSON {
-    public init() {
-        
-    }
-    
-    public init(host: String?) {
-        self.host = host
-    }
-    public var host: String?
 }

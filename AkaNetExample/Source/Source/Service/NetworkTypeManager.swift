@@ -33,32 +33,9 @@
 import Foundation
 import Reachability
 import CoreTelephony
-import HandyJSON
 
 public typealias StreamCompleteBlock = (_ data:Dictionary<String,Any>, EventSource?) -> Void
 public typealias CompleteBlock = (_ data:Dictionary<String,Any>) -> Void
-
-open class CommonResponse: HandyJSON{
-    
-    /// 基础返回对象
-    public var base_resp: BaseResp = BaseResp()
-    public var trace_id:String?
-    required public init(){}
-}
-
-public class BaseResp: HandyJSON{
-    
-    /// 返回状态码 默认： -1
-    public var status_code:Int = -1
-    
-    /// 默认 ：解析错误
-    public var status_msg : String = "Error, please try again"
-    
-    public var trace_id: String?
-    public var trace_info_str: String?
-
-    required public init() {}
-}
 
 public class NetworkTypeManager: NSObject {
     

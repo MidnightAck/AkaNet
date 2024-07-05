@@ -24,7 +24,6 @@ Pod::Spec.new do |s|
   
   s.frameworks = 'Foundation', 'UIKit'
   
-  s.dependency 'HandyJSON'
   s.dependency 'Alamofire'
   s.dependency 'Reachability'
 

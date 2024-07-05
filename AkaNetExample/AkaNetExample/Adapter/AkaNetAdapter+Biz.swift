@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import HandyJSON
 import AkaNet
 import UIKit
 
@@ -104,9 +103,6 @@ extension AkaNetAdapter: AkaNetAdaptable {
         return AkaNetConfig.shared.dynamicIps
     }
 
-    public var domainList:[Domain] {
-        return AkaNetConfig.shared.domainList
-    }
     
     public func commonParams() -> [String: Any] {
         var common_params = auth?.common_params ?? [:]

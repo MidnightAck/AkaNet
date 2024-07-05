@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import HandyJSON
 import AkaNet
 import UIKit
 
@@ -26,9 +25,7 @@ public class AkaNetConfig: NSObject {
     public var defaultWebsocketTestDomain = ""
 
     public var dynamicIps: [String] = []
-    
-    public var domainList:[Domain]
-    
+        
     public var refresh_token: String {
         return UserDefaults.standard.string(forKey: REFRESH_TOKEN) ?? ""
     }
@@ -47,7 +44,6 @@ public class AkaNetConfig: NSObject {
     static public let shared: AkaNetConfig = AkaNetConfig()
 
     override init() {
-        self.domainList = [Domain(host: kDefaultDomain)]
         self.defaultTimeoutMs = 60 * 1000
         
         super.init()

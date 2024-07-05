@@ -10,12 +10,11 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/MidnightAck/AkaNet"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.authors      = ["sekitou"]
-  spec.social_media_url = "https://twitter.com/liusiyuan"
+  spec.social_media_url = "https://x.com/MidnightAckX"
   spec.source       = { :git => "https://github.com/MidnightAck/AkaNet.git", :tag => "#{spec.version}" }
   spec.source_files = "Source/**/*.swift"
 
   # Project Dependencies
-  spec.dependency 'HandyJSON', '~> 5.0.2'
   spec.dependency 'Alamofire'
   spec.dependency 'Reachability'
   

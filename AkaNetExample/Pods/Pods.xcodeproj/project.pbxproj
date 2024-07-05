@@ -563,6 +563,7 @@
 		30340AEC11066447D4419F5663556BC5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				049A7CC82C37C39E00B4AC56 /* AkaNetworkService.swift */,
 				5FC7BD53403318AAA2880F001C3CF4B1 /* NetworkTypeManager.swift */,
 				5BB2D2756349EBC5D2BDCC4B2B805B39 /* SessionManager.swift */,
 				049A7CCA2C37C59400B4AC56 /* NetworkService.swift */,
@@ -707,7 +708,6 @@
 				E1FEC6451E58981620A15C9CCB1054B9 /* Pod */,
 				30340AEC11066447D4419F5663556BC5 /* Service */,
 				DF4D95B051720C39B816008D1712D8A7 /* Support Files */,
-				049A7CC82C37C39E00B4AC56 /* AkaNetworkService.swift */,
 			);
 			name = AkaNet;
 			path = ../Source;

@@ -4,14 +4,12 @@ import HandyJSON
 import UIKit
 
 public protocol AkaNetAdaptable {
-    var auth_token: String { get }
     var app_id: Int { get }
     var user_id: Int { get }
     var idfa: String { get }
     var idfv: String { get }
     var ip_region: String? { get }
     var ip: String? { get }
-
     var device_id: String { get }
     var lane: String { get set }
     var releaseLane: String { get }
@@ -24,19 +22,17 @@ public protocol AkaNetAdaptable {
     var defaultTestDomain: String { get }
     var dynamicIps: [String] { get }
     var domainList: [Domain] { get }
-    var customRules: [NetworkConfigCustomRule]? { get }
     
-    /// 请求池最大连接数
     var requestPoolLimit: Int { get }
     
     func commonParams() -> [String: Any]
+    
+    
     func getAppVersion() -> String
     func getSyslanguage() -> String?
     func getRegion() -> String?
     func headerParams() -> [String: String]
-    
     func streamingDomain() -> String
-    func mirrorDomain() -> String
     func domain() -> String
     func getTimeOut(path: String?) -> Int
     func updateIpRegion(ip_region: String)
@@ -46,7 +42,7 @@ public protocol AkaNetAdaptable {
 extension AkaNetAdaptable {    
 
     public var app_id: Int {
-        return 300
+        return 1
     }
     
     public var user_id: Int {
@@ -126,10 +122,6 @@ extension AkaNetAdaptable {
         return []
     }
     
-    public var customRules: [NetworkConfigCustomRule]? {
-        return nil
-    }
-    
     public func commonParams() -> [String: Any] {
         return [:]
     }
@@ -161,11 +153,6 @@ extension AkaNetAdaptable {
     /// - Parameter path: 请求path
     /// - Returns: ms超时时间
     public func getTimeOut(path: String? = nil) -> Int{
-        if let rule = customRules?.first(where: { $0.path == path }) {
-            if rule.enable == true {
-                return Int(rule.timeout_ms ?? defaultTimeoutMs)
-            }
-        }
         return Int(defaultTimeoutMs)
     }
     
@@ -205,22 +192,12 @@ extension AkaNetAdaptable {
 
 public struct AkaNetAdapter {
     struct netAdapter : AkaNetAdaptable {
+        
     }
     public static let shared: AkaNetAdaptable = (AkaNetAdapter() as? AkaNetAdaptable) ?? netAdapter()
 }
 
-public struct NetworkConfigCustomRule: HandyJSON {
-    public init() {
-        
-    }
-    
-    public var enable: Bool?
-    public var timeout_ms: Int64?
-    public var path: String?
-    public var read_timeout_ms: Int64?
-    public var write_timeout_ms: Int64?
-    
-}
+
 public struct Domain: HandyJSON {
     public init() {
         

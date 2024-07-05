@@ -3,7 +3,7 @@ import Foundation
 import HandyJSON
 
 public class StreamManager: NSObject {
-    public static func StreamRequest(address:String,params:Dictionary<String,Any>, block:@escaping GLCStreamCompleteBlock) {
+    public static func StreamRequest(address:String,params:Dictionary<String,Any>, block:@escaping StreamCompleteBlock) {
         let url = AkaNetAdapter.shared.streamingDomain() + address
         SessionManager.StreamRequest(url: url, params: params, success: block) { error in
             let baseResp = BaseResp.deserialize(from: error)

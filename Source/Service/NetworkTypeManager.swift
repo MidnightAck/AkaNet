@@ -3,8 +3,8 @@ import Reachability
 import CoreTelephony
 import HandyJSON
 
-public typealias GLCStreamCompleteBlock = (_ data:Dictionary<String,Any>, EventSource?) -> Void
-public typealias GLCompleteBlock = (_ data:Dictionary<String,Any>) -> Void
+public typealias StreamCompleteBlock = (_ data:Dictionary<String,Any>, EventSource?) -> Void
+public typealias CompleteBlock = (_ data:Dictionary<String,Any>) -> Void
 
 open class CommonResponse: HandyJSON{
     
@@ -34,8 +34,8 @@ public class NetworkTypeManager: NSObject {
         do{
             let reachability: Reachability = try Reachability()
             try reachability.startNotifier()
-            let status = reachability.connection
-            if(status == .cellular){
+            let status = reachability.currentReachabilityStatus()
+            if status == .ReachableViaWWAN {
                 let networkInfo = CTTelephonyNetworkInfo()
                 
                 if let currentRadioAccessTechnology = networkInfo.currentRadioAccessTechnology {
@@ -58,9 +58,9 @@ public class NetworkTypeManager: NSObject {
                 } else {
                     return "unavailable"
                 }
-            }else if (status == .wifi){
+            }else if status == .ReachableViaWiFi {
                 return "WIFI"
-            }else if (status == .unavailable){
+            }else if status == .NotReachable {
                 return "unavailable"
             }else{
                 return "unavailable"

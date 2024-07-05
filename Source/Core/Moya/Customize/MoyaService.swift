@@ -38,7 +38,6 @@ public class MoyaService: NSObject {
     public func getConfig() -> URLSessionConfiguration {
         let config = URLSessionConfiguration.default
         config.allowsCellularAccess = true
-//        config.waitsForConnectivity = true
         if currentPickIdx != 0, !runOut {
             config.connectionProxyDictionary = [
                 kCFNetworkProxiesHTTPEnable as AnyHashable: true,

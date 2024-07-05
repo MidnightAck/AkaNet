@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        testGet()
     }
     
     
@@ -22,5 +24,9 @@ class ViewController: UIViewController {
 
 
 extension ViewController {
-
+    func testGet() {
+        AkaNetworkService.GET(address: "www.baidu.com", params: [:]) { data in
+            print("🐱🐱🐱🐱🐱1")
+        }
+    }
 }

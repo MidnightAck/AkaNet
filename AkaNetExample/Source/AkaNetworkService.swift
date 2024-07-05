@@ -11,15 +11,15 @@ import HandyJSON
 import Combine
 
 public class AkaNetworkService : NSObject{
-    public static func GET(address:String,params:Dictionary<String,Any>?, priority: RequestPriority = .low, block:@escaping GLCompleteBlock){
+    public static func GET(address:String,params:Dictionary<String,Any>?, priority: RequestPriority = .low, block:@escaping CompleteBlock){
         NetworkService.shared.GET(address: address, params: params, priority: priority, domainType: .normal, block: block)
     }
     
-    public static func POST(address:String,params:Dictionary<String,Any>, priority: RequestPriority = .low, isStreaming:Bool = false,block:@escaping GLCompleteBlock){
+    public static func POST(address:String,params:Dictionary<String,Any>, priority: RequestPriority = .low, isStreaming:Bool = false,block:@escaping CompleteBlock){
         NetworkService.shared.POST(address: address, params: params, priority: priority, domainType: .normal, block: block)
     }
     
-    public static func StreamRequest(address:String,params:Dictionary<String,Any>,block:@escaping GLCStreamCompleteBlock) {
+    public static func StreamRequest(address:String,params:Dictionary<String,Any>,block:@escaping StreamCompleteBlock) {
         StreamManager.StreamRequest(address: address, params: params, block: block)
     }
     

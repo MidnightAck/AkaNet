@@ -21,23 +21,23 @@ class NetworkService: NSObject {
         super.init()
     }
     
-    public func GET(address: String, params: [String: Any]?, priority: RequestPriority, domainType: DomianType = .normal, block: @escaping GLCompleteBlock) {
+    public func GET(address: String, params: [String: Any]?, priority: RequestPriority, domainType: DomianType = .normal, block: @escaping CompleteBlock) {
         let request = MultiTarget(AkaBasicMoyaAPI.get(url: address, params: params ?? [:], domainType: domainType))
         sendRequest(target: request, priority: priority, block: block)
     }
     
-    public func POST(address: String, params: [String: Any], priority: RequestPriority, domainType: DomianType = .normal, block: @escaping GLCompleteBlock) {
+    public func POST(address: String, params: [String: Any], priority: RequestPriority, domainType: DomianType = .normal, block: @escaping CompleteBlock) {
         let request = MultiTarget(AkaBasicMoyaAPI.post(url: address, params: params, domainType: domainType))
         sendRequest(target: request, priority: priority, block: block)
     }
     
-    public func sendRequest(target: MultiTarget, priority: RequestPriority, retryCount: Int = 3, block: @escaping GLCompleteBlock) {
+    public func sendRequest(target: MultiTarget, priority: RequestPriority, retryCount: Int = 3, block: @escaping CompleteBlock) {
         serialQueue.async {
             self._sendRequest(target: target, priority: priority, retryCount: retryCount, block: block)
         }
     }
         
-    private func _sendRequest(target: MultiTarget, priority: RequestPriority, retryCount: Int, block: @escaping GLCompleteBlock) {
+    private func _sendRequest(target: MultiTarget, priority: RequestPriority, retryCount: Int, block: @escaping CompleteBlock) {
         if isRefreshingToken {
             pendingRequests.append(.init(request: target, priorty: priority, completion: block))
             return
@@ -151,7 +151,7 @@ class NetworkService: NSObject {
 private struct RetryRequest {
     let request: MultiTarget
     let priorty: RequestPriority
-    let completion: GLCompleteBlock
+    let completion: CompleteBlock
 }
 
 public class AkaBasicMoyaPlugin: PluginType {

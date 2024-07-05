@@ -3,8 +3,8 @@ import Reachability
 import CoreTelephony
 import HandyJSON
 
-public typealias GLCStreamCompleteBlock = (_ data:Dictionary<String,Any>, EventSource?) -> Void
-public typealias GLCompleteBlock = (_ data:Dictionary<String,Any>) -> Void
+public typealias StreamCompleteBlock = (_ data:Dictionary<String,Any>, EventSource?) -> Void
+public typealias CompleteBlock = (_ data:Dictionary<String,Any>) -> Void
 
 open class CommonResponse: HandyJSON{
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049A7CCE2C37CA2300B4AC56 /* AkaNetAdapter+Biz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A7CCD2C37CA2300B4AC56 /* AkaNetAdapter+Biz.swift */; };
+		049A7CD02C37CAEA00B4AC56 /* AkaNetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A7CCF2C37CAEA00B4AC56 /* AkaNetConfig.swift */; };
 		6B73DBF92C32AEBE00B00926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B73DBF82C32AEBE00B00926 /* AppDelegate.swift */; };
 		6B73DBFB2C32AEBE00B00926 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B73DBFA2C32AEBE00B00926 /* SceneDelegate.swift */; };
 		6B73DBFD2C32AEBE00B00926 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B73DBFC2C32AEBE00B00926 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049A7CCD2C37CA2300B4AC56 /* AkaNetAdapter+Biz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AkaNetAdapter+Biz.swift"; sourceTree = "<group>"; };
+		049A7CCF2C37CAEA00B4AC56 /* AkaNetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaNetConfig.swift; sourceTree = "<group>"; };
 		6B73DBF52C32AEBE00B00926 /* AkaNetExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkaNetExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B73DBF82C32AEBE00B00926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B73DBFA2C32AEBE00B00926 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049A7CCC2C37CA0E00B4AC56 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				049A7CCD2C37CA2300B4AC56 /* AkaNetAdapter+Biz.swift */,
+				049A7CCF2C37CAEA00B4AC56 /* AkaNetConfig.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 		6B73DBEC2C32AEBE00B00926 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +76,7 @@
 		6B73DBF72C32AEBE00B00926 /* AkaNetExample */ = {
 			isa = PBXGroup;
 			children = (
+				049A7CCC2C37CA0E00B4AC56 /* Adapter */,
 				6B73DBF82C32AEBE00B00926 /* AppDelegate.swift */,
 				6B73DBFA2C32AEBE00B00926 /* SceneDelegate.swift */,
 				6B73DBFC2C32AEBE00B00926 /* ViewController.swift */,
@@ -207,8 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B73DBFD2C32AEBE00B00926 /* ViewController.swift in Sources */,
+				049A7CD02C37CAEA00B4AC56 /* AkaNetConfig.swift in Sources */,
 				6B73DBF92C32AEBE00B00926 /* AppDelegate.swift in Sources */,
 				6B73DBFB2C32AEBE00B00926 /* SceneDelegate.swift in Sources */,
+				049A7CCE2C37CA2300B4AC56 /* AkaNetAdapter+Biz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
